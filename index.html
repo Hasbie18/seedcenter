@@ -7,6 +7,10 @@
     <link href="dist/output.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link rel="icon" href="dist/img/wix2.png">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <title>Seed Center</title>
 </head>
 <body>
@@ -94,17 +98,50 @@
           <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
             Polije berkomitmen untuk memberikan produk hasil benih terbaik. Ada cerita dibalik hasil produk terbaik dan kualitas yang terjamin.
           </p>
-          <div class="flex justify-center md:justify-start">
-            <a
-              href="#"
-              class="p-3 px-6 pt-2 text-white bg-chocolate rounded-full baseline hover:bg-darkSkins ease-in-out duration-300"
-              >View More</a
-            >
+          <div class="flex justify-center md:justify-start" >
+            <button class="p-2 px-6 pt-2 text-white bg-chocolate rounded-full baseline hover:bg-darkSkins ease-in-out duration-300" id="show-modal">
+              View More
+            </button>
           </div>
         </div>
-        <!-- Image -->
-        <div class="md:w-1/2">
-          <img src="dist/img/seedCenter.jpg" alt="" class="mb-5"/>
+
+        <!-- modal start -->
+        <div class="bg-black bg-opacity-50 fixed inset-0 hidden justify-center items-center h-screen w-full left-0 top-0" id="overlay">
+          <div class="bg-gray-200 max-w-xl py-2 px-3 rounded shadow-xl text-gray-800">
+              <div class="flex justify-between items-center">
+                  <h4 class="text-xl font-bold text-center"> Berdirinya Seed Center</h4>
+                  <svg class="h-6 w-6 cursor-pointer p-1 hover:bg-gray-300 rounded-full" id="close-modal" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+              </div>
+              <div class="mt-2 text-md text-center py-5">
+                  <p>Seed Center merupakan tempat pengolahan benih di Politeknik Negeri Jember yang dibangun pada tahun <span class="font-bold">2018.</span><br> Penanggung jawab seed center merupakan teknisi sekaligus Alumni yang berasal dari Teknik Produksi Benih Polije.<br> Yaitu Bapak <span class="font-bold">Alviyan Tono Arif. S.ST</span>, untuk saat ini pengolahan benih difokuskankepada komuditi padi saja. Yang tentunya sudah bersetifikat dari BPSP, sedangkan untuk komoditi yang lain masih dalam proses pengajuan.</p>
+              </div>
+              <div class="mt-3 flex justify-end space-x-3">
+                  <button class="px-3 py-1 rounded hover:bg-green-300 hover:bg-opacity-50 hover:text-green-900" id="close-modal2">Close</button>
+              </div>
+          </div>
+      </div>
+      <!-- modal end -->
+
+      <!-- Image -->
+        <div class="swiper max-w-xl mx-2 my-5 md:max-w-xl sm:max-w-sm">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="dist/img/use1Fixed.png" alt="polije"></div>
+            <div class="swiper-slide"><img src="dist/img/use2Fixed.png" alt="polije"></div>
+            <div class="swiper-slide"><img src="dist/img/use3Fixed.png" alt="polije"></div>
+            <div class="swiper-slide"><img src="dist/img/seedCenterFixed.png" alt="polije"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
@@ -147,14 +184,14 @@
         <!-- List Container -->
         <div class="flex justify-around space-x-32">
           <div class="flex flex-col space-y-3 text-black">
-            <a href="#" class="hover:text-veryDarkBlue">Home</a>
-            <a href="#" class="hover:text-veryDarkBlue">Shop</a>
-            <a href="#" class="hover:text-veryDarkBlue">Collection</a>
-            <a href="#" class="hover:text-veryDarkBlue">Contact</a>
+            <a href="#home" class="hover:text-veryDarkBlue">Home</a>
+            <a href="https://masyitohvrij07.wixsite.com/seedcenter/shop" class="hover:text-veryDarkBlue">Shop</a>
+            <a href="https://masyitohvrij07.wixsite.com/seedcenter/new-collection" class="hover:text-veryDarkBlue">Collection</a>
+            <a href="https://masyitohvrij07.wixsite.com/seedcenter/contact" class="hover:text-veryDarkBlue">Contact</a>
           </div>
           <div class="flex flex-col space-y-3 text-black">
-            <a href="#" class="hover:text-veryDarkBlue">Careers</a>
-            <a href="#" class="hover:text-veryDarkBlue">Community</a>
+            <a href="https://polije.ac.id/en/the-history/" class="hover:text-veryDarkBlue">Careers</a>
+            <a href="https://polije.ac.id/teknik-produksi-benih-2/" class="hover:text-veryDarkBlue">Community</a>
             <a href="https://masyitohvrij07.wixsite.com/seedcenter/store-policies" class="hover:text-veryDarkBlue">Privacy Policy</a>
           </div>
         </div>
@@ -184,5 +221,34 @@
 
     <script src="https://kit.fontawesome.com/4c94b26ed2.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- for swipper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        speed:400,
+        spaceBetween: 100,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+        el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+        el: '.swiper-scrollbar',
+        },
+      });
+    </script>
 </body>
 </html>
